@@ -22,7 +22,7 @@ export default function DashboardPage() {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: [0.25, 0.46, 0.45, 0.94] as const
       }
     }
   }

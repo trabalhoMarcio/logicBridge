@@ -13,7 +13,7 @@ interface ProfileData {
 
 export default function ProfilePage() {
   const router = useRouter()
-  const { refreshProfile, user } = useAuth()
+  const { user } = useAuth()
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [profile, setProfile] = useState<ProfileData>({
@@ -110,10 +110,6 @@ export default function ProfilePage() {
 
       if (ok) {
         setMessage('Perfil atualizado com sucesso!')
-        // Atualiza o perfil no contexto global
-        if (typeof refreshProfile === 'function') {
-          await refreshProfile()
-        }
       } else {
         setMessage(error?.message || 'Erro ao atualizar perfil')
       }
@@ -219,7 +215,7 @@ export default function ProfilePage() {
                   name="nome"
                   type="text"
                   required
-                  className={`w-full px-4 py-4 border rounded-xl focus:ring-2 text-black focus:ring-green-500 focus:border-green-500 transition-all duration-200 font-montserrat ${
+                  className={`w-full px-4 py-4 border rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 font-montserrat ${
                     errors.nome ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Seu nome completo"
@@ -244,7 +240,7 @@ export default function ProfilePage() {
                   name="email"
                   type="email"
                   readOnly
-                  className="w-full px-4 py-4 border border-gray-300 text-black rounded-xl bg-gray-50 text-gray-500 cursor-not-allowed font-montserrat"
+                  className="w-full px-4 py-4 border border-gray-300 rounded-xl bg-gray-50 cursor-not-allowed font-montserrat"
                   value={profile.email}
                 />
                 <p className="text-gray-500 text-sm mt-2 font-montserrat font-light">
@@ -262,7 +258,7 @@ export default function ProfilePage() {
                   name="telefone"
                   type="tel"
                   required
-                  className={`w-full px-4 py-4 border rounded-xl focus:ring-2 text-black focus:ring-green-500 focus:border-green-500 transition-all duration-200 font-montserrat ${
+                  className={`w-full px-4 py-4 border rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 font-montserrat ${
                     errors.telefone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="(11) 99999-9999"
