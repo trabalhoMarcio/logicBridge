@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(88,120)">
+    <rect x="0" y="0" width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
+    <g transform="translate(12,8) scale(1.0)" fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="48,16 8,96 88,96"/>
+      <line x1="48" y1="32" x2="48" y2="76"/>
+    </g>
+  </g>
+  <text x="230" y="180" font-family="Montserrat, Arial, sans-serif" font-size="64" font-weight="800" fill="#ffffff">LogicBridge</text>
+  <text x="230" y="240" font-family="Montserrat, Arial, sans-serif" font-size="36" font-weight="600" fill="#eafff3">Conecte lógica à linguagem</text>
+  <text x="88" y="330" font-family="Geist, Arial, sans-serif" font-size="28" fill="#ecfdf5">Traduza frases em português para fórmulas do CPC e vice-versa.</text>
+  <text x="88" y="370" font-family="Geist, Arial, sans-serif" font-size="24" fill="#dcfce7">Defina proposições, experimente conectivos e aprenda lógica formal.</text>
+</svg>

@@ -101,7 +101,7 @@ export default function Footer() {
           className="border-t border-gray-100 mt-8 pt-8 text-center"
         >
           <p className="text-white font-montserrat font-light">
-            © 2024 LogicBridge. Conectando lógica e linguagem.
+            © 2025 LogicBridge. Conectando lógica e linguagem.
           </p>
         </motion.div>
       </div>

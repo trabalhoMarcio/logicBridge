@@ -75,7 +75,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -85,17 +85,17 @@ export default function HomePage() {
           {/* Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-green-200 rounded-full px-4 py-2 mb-8 shadow-sm"
+            className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-green-200 rounded-full px-3 sm:px-4 py-1 sm:py-2 mb-6 sm:mb-8 shadow-sm"
           >
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-gray-600 font-montserrat font-medium">
+            <span className="text-xs sm:text-sm text-gray-600 font-montserrat font-medium">
               IA Avançada • Processamento de Linguagem Natural
             </span>
           </motion.div>
 
           <motion.h1 
             variants={itemVariants}
-            className="text-7xl font-bold text-gray-900 mb-6 font-montserrat tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat tracking-tight"
           >
             Conecte a{' '}
             <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">
@@ -112,7 +112,7 @@ export default function HomePage() {
           
           <motion.p 
             variants={itemVariants}
-            className="text-2xl text-gray-600 mb-12 leading-relaxed font-montserrat font-light max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-montserrat font-light max-w-3xl mx-auto px-4"
           >
             Transforme frases do português em fórmulas lógicas e vice-versa com nossa 
             <span className="font-medium text-green-500"> tecnologia de ponta</span>. 
@@ -122,35 +122,35 @@ export default function HomePage() {
           {/* Features Grid */}
           <motion.div 
             variants={containerVariants}
-            className="grid lg:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto"
+            className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-5xl mx-auto"
           >
             {/* Modo 1 */}
             <motion.div
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-8 bg-white border border-gray-200 rounded-3xl hover:border-green-200 hover:shadow-2xl hover:shadow-green-100 transition-all duration-500 cursor-pointer"
+              className="group p-6 sm:p-8 bg-white border border-gray-200 rounded-3xl hover:border-green-200 hover:shadow-2xl hover:shadow-green-100 transition-all duration-500 cursor-pointer"
               onClick={() => handleConverterRedirect('/converter/nl-to-cpc')}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <motion.span 
                   animate={{ rotate: [0, 5, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="text-white font-bold text-2xl"
+                  className="text-white font-bold text-xl sm:text-2xl"
                 >
                   →
                 </motion.span>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 font-montserrat">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-montserrat">
                 NL → CPC
               </h3>
-              <p className="text-gray-600 mb-6 text-lg font-montserrat font-light leading-relaxed">
+              <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg font-montserrat font-light leading-relaxed">
                 Converta frases em português para fórmulas precisas de lógica proposicional
               </p>
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-100 group-hover:border-blue-200 transition-colors">
-                <p className="text-sm text-gray-500 font-montserrat font-medium mb-2">Entrada:</p>
-                <p className="text-gray-800 font-montserrat">"Se chover, então a grama ficará molhada."</p>
-                <p className="text-sm text-gray-500 font-montserrat font-medium mt-4 mb-2">Saída:</p>
-                <p className="text-gray-800 font-mono text-lg font-bold">P → Q</p>
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-6 rounded-2xl border border-blue-100 group-hover:border-blue-200 transition-colors">
+                <p className="text-xs sm:text-sm text-gray-500 font-montserrat font-medium mb-2">Entrada:</p>
+                <p className="text-gray-800 font-montserrat text-sm sm:text-base">"Se chover, então a grama ficará molhada."</p>
+                <p className="text-xs sm:text-sm text-gray-500 font-montserrat font-medium mt-3 sm:mt-4 mb-2">Saída:</p>
+                <p className="text-gray-800 font-mono text-base sm:text-lg font-bold">P → Q</p>
               </div>
             </motion.div>
 
@@ -158,29 +158,29 @@ export default function HomePage() {
             <motion.div
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-8 bg-white border border-gray-200 rounded-3xl hover:border-green-200 hover:shadow-2xl hover:shadow-green-100 transition-all duration-500 cursor-pointer"
+              className="group p-6 sm:p-8 bg-white border border-gray-200 rounded-3xl hover:border-green-200 hover:shadow-2xl hover:shadow-green-100 transition-all duration-500 cursor-pointer"
               onClick={() => handleConverterRedirect('/converter/cpc-to-nl')}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <motion.span 
                   animate={{ rotate: [0, -5, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="text-white font-bold text-2xl"
+                  className="text-white font-bold text-xl sm:text-2xl"
                 >
                   ←
                 </motion.span>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 font-montserrat">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-montserrat">
                 CPC → NL
               </h3>
-              <p className="text-gray-600 mb-6 text-lg font-montserrat font-light leading-relaxed">
+              <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg font-montserrat font-light leading-relaxed">
                 Traduza fórmulas lógicas complexas para frases coerentes em português
               </p>
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 group-hover:border-green-200 transition-colors">
-                <p className="text-sm text-gray-500 font-montserrat font-medium mb-2">Entrada:</p>
-                <p className="text-gray-800 font-mono text-lg font-bold">(P ∧ Q) → R</p>
-                <p className="text-sm text-gray-500 font-montserrat font-medium mt-4 mb-2">Saída:</p>
-                <p className="text-gray-800 font-montserrat">"Se chover e fizer frio, então a aula será cancelada."</p>
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl border border-green-100 group-hover:border-green-200 transition-colors">
+                <p className="text-xs sm:text-sm text-gray-500 font-montserrat font-medium mb-2">Entrada:</p>
+                <p className="text-gray-800 font-mono text-base sm:text-lg font-bold">(P ∧ Q) → R</p>
+                <p className="text-xs sm:text-sm text-gray-500 font-montserrat font-medium mt-3 sm:mt-4 mb-2">Saída:</p>
+                <p className="text-gray-800 font-montserrat text-sm sm:text-base">"Se chover e fizer frio, então a aula será cancelada."</p>
               </div>
             </motion.div>
           </motion.div>
@@ -194,14 +194,14 @@ export default function HomePage() {
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               onClick={handleGetStarted}
-              className="px-12 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-semibold text-xl hover:from-green-600 hover:to-emerald-700 shadow-2xl shadow-green-200 transition-all duration-300 font-montserrat"
+              className="px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-semibold text-lg sm:text-xl hover:from-green-600 hover:to-emerald-700 shadow-2xl shadow-green-200 transition-all duration-300 font-montserrat"
             >
-              <span className="flex items-center space-x-3">
+              <span className="flex items-center space-x-2 sm:space-x-3">
                 <span>{user ? 'Ir para o Dashboard' : 'Começar Agora'}</span>
                 <motion.svg 
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                  className="w-5 h-5" 
+                  className="w-4 h-4 sm:w-5 sm:h-5" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -213,7 +213,7 @@ export default function HomePage() {
             
             <motion.p
               variants={itemVariants}
-              className="text-gray-500 mt-6 font-montserrat font-light"
+              className="text-gray-500 mt-4 sm:mt-6 font-montserrat font-light text-sm sm:text-base"
             >
               {user ? 'Continue explorando as funcionalidades' : 'Comece em segundos • Sem custo inicial'}
             </motion.p>
@@ -224,10 +224,10 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mt-4 inline-flex items-center space-x-2 bg-green-50 border border-green-200 rounded-full px-4 py-2"
+                className="mt-3 sm:mt-4 inline-flex items-center space-x-2 bg-green-50 border border-green-200 rounded-full px-3 sm:px-4 py-1 sm:py-2"
               >
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-green-700 font-montserrat">
+                <span className="text-xs sm:text-sm text-green-700 font-montserrat">
                   ✅ Você está logado como {user.email}
                 </span>
               </motion.div>
@@ -237,18 +237,18 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
+      <section className="bg-gray-50 py-12 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-20"
           >
-            <h2 className="text-5xl font-bold text-gray-900 mb-6 font-montserrat">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat">
               Conectivos Suportados
             </h2>
-            <p className="text-xl text-gray-600 font-montserrat font-light max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 font-montserrat font-light max-w-2xl mx-auto px-4">
               Trabalhe com todos os principais operadores da lógica proposicional de forma intuitiva
             </p>
           </motion.div>
@@ -257,7 +257,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto"
           >
             {[
               { symbol: '∧', name: 'E (Conjunção)', example: 'P ∧ Q', color: 'from-blue-500 to-cyan-600' },
@@ -273,17 +273,17 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5, scale: 1.05 }}
-                className="bg-white p-8 rounded-3xl border border-gray-200 text-center hover:shadow-2xl hover:border-green-200 transition-all duration-300 group"
+                className="bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-gray-200 text-center hover:shadow-2xl hover:border-green-200 transition-all duration-300 group"
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${connective.color} rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <span className="text-white font-bold text-3xl">
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br ${connective.color} rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <span className="text-white font-bold text-xl sm:text-2xl md:text-3xl">
                     {connective.symbol}
                   </span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-3 text-lg font-montserrat">
+                <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base md:text-lg font-montserrat">
                   {connective.name}
                 </h3>
-                <p className="text-gray-500 font-mono text-sm bg-gray-50 py-2 px-3 rounded-lg group-hover:bg-gray-100 transition-colors">
+                <p className="text-gray-500 font-mono text-xs sm:text-sm bg-gray-50 py-1 sm:py-2 px-2 sm:px-3 rounded-lg group-hover:bg-gray-100 transition-colors">
                   {connective.example}
                 </p>
               </motion.div>
