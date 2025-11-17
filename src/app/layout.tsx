@@ -22,8 +22,49 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "LogicBridge - Conecte Lógica e Linguagem",
-  description: "Transforme frases em fórmulas lógicas e vice-versa. Uma ponte inteligente entre linguagem natural e lógica proposicional.",
+  title: {
+    default: "LogicBridge – Conecte lógica à linguagem",
+    template: "%s | LogicBridge",
+  },
+  description:
+    "Lógica IA Web: traduza entre linguagem natural (PT-BR) e lógica proposicional (CPC). Defina proposições, experimente conectivos e entenda lógica formal de forma interativa.",
+  keywords: [
+    "lógica proposicional",
+    "CPC",
+    "linguagem natural",
+    "educação",
+    "IA",
+    "Genkit",
+    "LogicBridge",
+  ],
+  openGraph: {
+    title: "LogicBridge – Conecte lógica à linguagem",
+    description:
+      "Traduza frases em português para fórmulas do CPC e vice-versa. Defina proposições e aprenda lógica formal de forma prática.",
+    siteName: "LogicBridge",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "LogicBridge – Conecte lógica à linguagem",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LogicBridge – Conecte lógica à linguagem",
+    description:
+      "Traduza NL↔CPC, defina proposições e experimente conectivos lógicos de forma interativa.",
+    images: ["/og-image.svg"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
