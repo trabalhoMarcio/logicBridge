@@ -4,8 +4,6 @@
 
 Traduza entre linguagem natural (PT-BR) e lógica proposicional (CPC) de forma confiável, interativa e didática.
 
-![LogicBridge OG](/public/og-image.svg)
-
 </div>
 
 ## Visão Geral
@@ -303,4 +301,25 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+
+## Colaboradores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/VictorSantuccii">
+        <img src="https://avatars.githubusercontent.com/u/160544887?v=4" width="100px;" alt="Foto de Víctor Santucci no GitHub"/><br>
+        <sub>
+          <b>Víctor Santucci</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Serginbr7">
+        <img src="https://avatars.githubusercontent.com/u/203936434?v=4" width="100px;" alt="Foto de Sério Henrique no GitHub"/><br>
+        <sub>
+          <b>Sérgio Henrique</b>
+        </sub>
+      </a>
+    </td>
 
